@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.liang.pojo.Student" scope="prototype">
+        <property name="name" value="liang" />
+        <property name="address" ref="address"/>
+
+<!--        array 注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+<!--        list 注入-->
+        <property name="hobbys">
+            <list>
+                <value>打篮球</value>
+                <value>唱跳</value>
+                <value>Rapper</value>
+            </list>
+        </property>
+<!--        map 注入-->
+        <property name="card">
+            <map>
+                <entry key="1" value="凯迪拉克" />
+                <entry key="2" value="特斯拉" />
+                <entry key="3" value="迈凯伦" />
+            </map>
+        </property>
+
+
+<!--        set 注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>蛋挞派对</value>
+                <value>元神</value>
+            </set>
+        </property>
+
+<!--        null 注入-->
+        <property name="wife">
+            <null></null>
+        </property>
+
+<!--        properties-->
+        <property name="info">
+            <props>
+                <prop key="administrator">administrator@example.org</prop>
+                <prop key="support">support@example.org</prop>
+                <prop key="development">development@example.org</prop>
+            </props>
+        </property>
+     </bean>
+
+    <bean id="address" class="com.liang.pojo.Address" />
+
+
+</beans>

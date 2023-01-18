@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/Spring-Ioc/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Spring-Ioc2/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring_javaAutoWire" />
+        <module name="Spring_staticProxy" />
+        <module name="Spring_ioc2" />
+        <module name="Spring-Ioc" />
+        <module name="Spring_autowire" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="19">
+      <module name="Spring-Ioc2" target="19" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Spring-Ioc" options="" />
+    </option>
+  </component>
+</project>
